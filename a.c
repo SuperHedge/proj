@@ -1,17 +1,19 @@
 #include <stdio.h>
 
+char enter (char x);
+
 int main() {
 
-    char a[5] = {'h','e','l','l','o'};
-    char *ch;
+    int x = 50;
+    int *ip;
     
-    *ch = &a[5];
+    *ip = &x;
     
-    scanf("%s", &a);
+    scanf("%d", &x);
     
-    printf ("%s \n", a);
+    printf ("%d \n", x);
     
-    printf ("%s \n", *ch);
+    printf ("%d \n", *ip);
   
   return 0;
   
