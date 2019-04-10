@@ -1,20 +1,21 @@
 #include <stdio.h>
 
-char enter (char x);
+char enter (char x[1024]);
 
-int main() {
-
-    int x = 50;
-    int *ip;
+char main(void) {
     
-    *ip = &x;
+    char c;
+    char f[1024];
     
-    scanf("%d", &x);
+    c = enter(f);
     
-    printf ("%d \n", x);
-    
-    printf ("%d \n", *ip);
+    printf("%s\n", f);
   
-  return 0;
-  
+ }
+ 
+char enter (char x[1024]) {
+     
+    scanf("%s", x);
+     
+    return 0;
  }
