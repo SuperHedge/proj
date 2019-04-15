@@ -5,7 +5,7 @@ int main(void) {
     char c[1024];
     int x, i;
     
-    printf("Enter : ");
+    printf("Enter Sentence to Cipher: ");
     gets(c);
     
     for (i = 0; c[i] != '\0'; i++) {
@@ -33,7 +33,7 @@ int main(void) {
     
         c[i] = x;
     
-        printf("%c", c[i]);
+        printf("Ciphered code is : %c", c[i]);
     
     }
     
