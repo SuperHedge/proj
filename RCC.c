@@ -8,6 +8,8 @@ int main(void) {
     printf("Enter Sentence to Cipher: ");
     gets(c);
     
+    printf("Ciphered code is : ");
+    
     for (i = 0; c[i] != '\0'; i++) {
     
         x = c[i];
@@ -30,13 +32,13 @@ int main(void) {
             x = 97;
         
         }
+        
+    c[i] = x;
     
-        c[i] = x;
-    
-        printf("%c", c[i]);
+    printf("%c", c[i]);
     
     }
     
-    
-    
+    printf("\n");
+
 }
