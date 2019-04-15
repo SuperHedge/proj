@@ -2,15 +2,41 @@
 
 int main(void) {
     
-    char c[1024], ch;
+    char c[1024];
     int x, i;
     
     printf("Enter : ");
     gets(c);
     
-    for (i = 0; c[i] != '\0'; i++)
+    for (i = 0; c[i] != '\0'; i++) {
     
-    ch = c[i];
+        x = c[i];
+        
+        if (x <= 'z' && x >= 'a') {
+            
+            x++;
+            
+        } else if (x <= 'Z' && x >= 'A') {
+            
+            x++;
+            
+        }
+        if (x == 91) {
+            
+            x = 65;
+        
+        } else if (x == 123) {
+            
+            x = 97;
+        
+        }
     
- //hello
+        c[i] = x;
+    
+        printf("%c", c[i]);
+    
+    }
+    
+    printf("\n");
+    
 }
