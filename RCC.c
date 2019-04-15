@@ -33,10 +33,10 @@ int main(void) {
     
         c[i] = x;
     
-        printf("Ciphered code is : %c", c[i]);
+        printf("%c", c[i]);
     
     }
     
-    printf("\n");
+    
     
 }
