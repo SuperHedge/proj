@@ -26,7 +26,7 @@ int main(void) {
             
         } else if (x <= 'Z' && x >= 'A') {
             
-            x = x + mo;
+            x = x + mod;
             
         }
         if (x == 91) {
