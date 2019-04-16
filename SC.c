@@ -1,13 +1,4 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <time.h>
-
-int printRandoms(int L, int U) {
-        
-        int R = (rand() % (U - L + 1)) + L; 
-        
-        printf("%d\n", R); 
-} 
 
 int main() {
     
@@ -21,23 +12,110 @@ int main() {
         
         x = ch[i];
         
-        if (x > 'A' && x < 'Z') {
+        if (x = 97){
+	
+	       x = 113; }
+	
+       /* else if (x = 'b'){
+	
+	       x = 'w'; }
+	
+        else if (x = 'c'){
+	
+	       x = 'e'; }
+	
+        else if (x = 'd'){
+	
+	       x = 'r'; }
+	
+        else if (x = 'e'){
+	
+	       x = 't'; }
+	
+        else if (x = 'f'){
+	
+	       x = 'y'; }
+	
+        if (x = 'g'){
+	
+	       x = 'u'; }
+	
+        if (x = 'h'){
+	
+	       x = 'i'; }
+	
+        if (x = 'i'){
+	
+	       x = 'o'; }
+	
+        if (x = 'j'){
+	
+	       x = 'p'; }
+	
+        if (x = 'k'){
+	
+	       x = 'a'; }
+	
+        if (x = 'l'){
+	
+	       x = 's'; }
+	
+        if (x = 'm'){
+	
+	       x = 'd'; }
+	
+        if (x = 'n'){
+	
+	       x = 'f'; }
+	
+        if (x = 'o'){
+	
+	       x = 'g'; }
+	   
+        if (x = 'p'){
+	
+	       x = 'h'; }
+	
+        if (x = 'q'){
+	
+	       x = 'j'; }
+	
+        if (x = 'r'){
+	
+	       x = 'k'; }
+	
+        if (x = 's'){
+	
+	       x = 'l'; }
+	
+        if (x = 't'){
+	
+	       x = 'z'; }
+	
+        if (x = 'u'){
+	
+	       x = 'x'; }
+	
+        if (x = 'v'){
+	
+	       x = 'c'; }
+	
+        if (x = 'w'){
+	
+	       x = 'v'; }	
+	
+        if (x = 'x'){
+	
+	       x = 'b'; }
+	
+        if (x = 'y'){
+	
+	       x = 'n'; }
+	
+        if (x = 'z'){
+	
+	       x = 'm'; }*/
             
-            int L = 65, U = 90; 
- 
-            srand(time(0));
-  
-            x = printRandoms(L, U);
-            
-        }else if (x > 'a' && x < 'z') {
-            
-            int L = 97, U = 122; 
- 
-            srand(time(0));
-  
-            x = printRandoms(L, U);
-            
-        }
         
         ch[i] = x;
         
