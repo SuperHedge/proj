@@ -1,5 +1,13 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <time.h>
+
+void printRandoms(int L, int U) {
+        
+        int R = (rand() % (U - L + 1)) + L; 
+        
+        printf("%d\n", R); 
+} 
 
 int main() {
     
@@ -13,13 +21,29 @@ int main() {
         
         A = x[i];
         
-        A = rand() % 90;
+        if (A > 'A' && A < 'Z') {
+            
+            int L = 65, U = 90; 
+ 
+            srand(time(0));
+  
+            printRandoms(L, U);
+            
+        }
+        
+        if (A > 'a' && A < 'z') {
+            
+            int L = 97, U = 122; 
+ 
+            srand(time(0));
+  
+            printRandoms(L, U);
+            
+        }
         
         x[i] = A;
        
        printf("%c", x[i]);
-       
-       printf("%d\n", A);
         
     }
     
