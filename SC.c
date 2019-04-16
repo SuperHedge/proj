@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <time.h>
 
-void printRandoms(int L, int U) {
+int printRandoms(int L, int U) {
         
         int R = (rand() % (U - L + 1)) + L; 
         
@@ -11,39 +11,37 @@ void printRandoms(int L, int U) {
 
 int main() {
     
-    char x[1024];
-    int A;
+    char ch[1024];
+    int x;
     
     printf("Enter : ");
     gets(x);
     
-    for (int i = 0; x[i] != '\0'; i++) {
+    for (int i = 0; ch[i] != '\0'; i++) {
         
-        A = x[i];
+        x = ch[i];
         
-        if (A > 'A' && A < 'Z') {
+        if (x > 'A' && x < 'Z') {
             
             int L = 65, U = 90; 
  
             srand(time(0));
   
-            printRandoms(L, U);
+            x = printRandoms(L, U);
             
-        }
-        
-        if (A > 'a' && A < 'z') {
+        }else if (x > 'a' && x < 'z') {
             
             int L = 97, U = 122; 
  
             srand(time(0));
   
-            printRandoms(L, U);
+            x = printRandoms(L, U);
             
         }
         
-        x[i] = A;
-       
-       printf("%c", x[i]);
+        ch[i] = x;
+        
+        printf("%c", ch[i]);
         
     }
     
