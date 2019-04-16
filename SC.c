@@ -1,44 +1,67 @@
 #include <stdio.h>
 #include <string.h>
 
-int () {
-    char* ciphertext = "qwertyuiopasdfghjklzxcvbnm";    // cipher lookup
-
-    char input[500];                                    // input buffer
-    printf("Enter text: ");
-    fgets(input, sizeof(input), stdin);                 // safe input from user
-    input[strlen(input) - 1] = 0;                       // remove the \n (newline)
-    int count = strlen(input);                          // get the string length
-
-    char output[count];                                 // output string
-    for(int i = 0; i < count; i++) {                    // loop through characters in input
-        int index = ((int) input[i]) - 97;              // get the index in the cipher by subtracting 'a' (97) from the current character
+int lower() {
+    char* ciphertext = "qwertyuiopasdfghjklzxcvbnm";                   
+    
+    for(int i = 0; i < count; i++) {
+        
+        int index = ((int) input[i]) - 97;   
+        
         if(index < 0) {
-            output[i] = ' ';                            // if index < 0, put a space to account for spaces
+            
+            output[i] = ' ';             
+            
         }
+        
         else {
-            output[i] = ciphertext[index];              // else, assign the output[i] to the ciphertext[index]
+            
+            output[i] = ciphertext[index];           
         }
     }
-    output[count] = 0;                                  // null-terminate the string
-
-    printf("output: %s\n", output);                     // output the result
+    
+    output[count] = 0;                                    
+    
 }
 
-int capital() {
-    char* ciphertext = "QWERTYUIOPASDFGHJKLZXCVBNM";    // cipher lookup                          
-                                                        
-    char output[count];                                 // output string
-    for(int i = 0; i < count; i++) {                    // loop through characters in input
-        int index = ((int) input[i]) - 65;              // get the index in the cipher by subtracting 'a' (97) from the current character
-        if(index < 0) {
-            output[i] = ' ';                            // if index < 0, put a space to account for spaces
+int upper() {
+    char* Uciphertext = "QWERTYUIOPASDFGHJKLZXCVBNM";                
+    
+    for(int i = 0; i < count; i++) {
+        
+        int Index = ((int) ch[i]) - 65;   
+        
+        if (Index < 0) {
+            Output[j] = ' ';        
+            
         }
+        
         else {
-            output[i] = ciphertext[index];              // else, assign the output[i] to the ciphertext[index]
+            Output[i] = Uciphertext[index];        
         }
     }
-    output[count] = 0;                                  // null-terminate the string
+    
+    output[count] = 0;                                        
+    
+}
 
-    printf("output: %s\n", output);                     // output the result
+int main() {
+    
+    char ch[500];  
+    
+    printf("Enter text: ");
+    
+    fgets(ch, sizeof(ch), stdin);
+    
+    ch[strlen(ch) - 1] = 0;       
+    
+    int count = strlen(ch);                          
+
+
+    char output[count];
+    
+    for (i = 0; ch[i] != '\0'; i++) {
+        
+        
+    }
 }
