@@ -2,23 +2,21 @@
 
 int main() {
     
-    char c[1024];             //declaring some variables
-    int x, i, mod;
+                     //declaring some variables
+    int x[1024], i, mod;
     
     printf("Enter Sentence to Cipher: ");
-    gets(c);
+    x[1024] = getchar( );
     
     do {
-        printf("Enter Shift : ");           // Need to compensate if a number is entered >9 //
+        printf("Enter Positive Shift : ");           // Need to compensate if a number is entered >9 //
         scanf("%d", &mod);
-    } while (mod < 10 && mod > 0);
+    } while (mod < 26 && mod > 0);
 
     
     printf("Ciphered code is : ");
     
-    for (i = 0; c[i] != '\0'; i++) {        // this 'for' loop is to cycle through each character given.
-    
-        x = c[i];                           // convet the character into a number
+    for (i = 0; x[i] != '\0'; i++) {        // this 'for' loop is to cycle through each character given.
         
         if (x <= 'z' && x >= 'a') {         // if the character is lowercase it goes through this 'if' statement
             
@@ -37,11 +35,9 @@ int main() {
             
             x = 97;
         
-        }
-        
-    c[i] = x;                               // converts the number back to ASCII
+        }                                 // converts the number back to ASCII
     
-    printf("%c", c[i]);                     // Then prints out the result
+    putchar(x);                     // Then prints out the result
     
     }
     
