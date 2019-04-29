@@ -5,7 +5,6 @@ char RCC (char v[]);
 char RCD (char v[]);
 char SC (char v[]);
 
-
 int main () {
     
     char q, k[1024];
