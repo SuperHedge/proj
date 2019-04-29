@@ -9,13 +9,13 @@ int main () {
     
     char q, k[1024];
     
-    printf("Enter message : ");
-    gets(k);
+    printf("Warning only use lowercase for substituion cipher \nEnter message : ");
+    gets(k);                                             // gets allows whitespace to be entered. Ignore the warning when using code
     
-    printf("Enter a for rotation cipher \nEnter b for rotation decipher \nEnter c for substitution cipher \n");
+    printf("\nEnter a for rotation cipher \n\nEnter b for rotation decipher \n\nEnter c for substitution cipher \n\n");
     
     do {
-        scanf("%c", &q);
+        scanf("%c", &q);                                // do while loop is to ensure the right letter is inputted
     }while (q != 'a' && q != 'b' && q != 'c');
     
     if (q == 'a') {
@@ -83,15 +83,15 @@ char RCD(char v[]) {                   // Basically the same as the cipher, exce
     
     printf("Diphered code is : ");
     
-    for (int rot = 0; rot < 25; rot++) {
+    for (int rot = 0; rot < 25; rot++) {        // this loop cycles through every option possible and prints it
         
-        for (i = 0; v[i] != '\0'; i++) {
+        for (i = 0; v[i] != '\0'; i++) {        // same as cipher with some changes
     
             x = v[i];
         
-            if (x <= 'z' && x >= 'a') {
+            if (x <= 'z' && x >= 'a') {         
             
-                x = x + 1;
+                x = x + 1;                      //plus one to cycle through every possiblity, x++ wasn't working
             
             } else if (x <= 'Z' && x >= 'A') {
             
@@ -128,22 +128,22 @@ char SC (char v[]) {
     
     char k[c];
 
-    for(int i = 0; i < c; i++) {
+    for(int i = 0; i < c; i++) {        // cycles through each character
 
-        int j = ((int) v[i]) - 97;  
+        int j = ((int) v[i]) - 'a';     // get the index in the cipher by subtracting 'a' from the current character
 
         if(j < 0) {
             
-            k[i] = ' ';    
+            k[i] = ' ';                 // compensates for white space
 
         } else {
             
-            k[i] = text[j];    
+            k[i] = text[j];             // assign k to text
 
         }
     }
     
-    k[c] = 0; 
+    k[c] = 0;                           // terminates the string
 
     printf("Ciphered text is : %s\n", k);
 }
