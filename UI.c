@@ -24,7 +24,7 @@ int main () {
         RCD(k);
         
     } else if (q == 'c') {
-        printf("=\nP");
+        printf("=P \n");
     }
     
     return 0;
@@ -77,12 +77,12 @@ char RCC(char v[]) {
 char RCD(char v[]) {                   // Basically the same as the cipher, except word changes and the mod is a minus
     
     
-    int x, i, mod;
+    int x, i;
     
     
     printf("Diphered code is : ");
     
-    for (int rot = 0; rot <= 26; rot++) {
+    for (int rot = 0; rot < 25; rot++) {
         
         for (i = 0; v[i] != '\0'; i++) {
     
@@ -90,20 +90,20 @@ char RCD(char v[]) {                   // Basically the same as the cipher, exce
         
             if (x <= 'z' && x >= 'a') {
             
-                x = x;
+                x = x + 1;
             
             } else if (x <= 'Z' && x >= 'A') {
             
-                x = x;
+                x = x + 1;
             
             }
-            if (x == '@') {
+            if (x == 91) {
             
-                x = 'Z';
+                x = 'A';
         
-            } else if (x == '`') {
+            } else if (x == '{') {
             
-                x = 'z';
+                x = 'a';
         
             }
         
@@ -118,5 +118,5 @@ char RCD(char v[]) {                   // Basically the same as the cipher, exce
     }
 
 
-    return mod;
+    return x;
 }
