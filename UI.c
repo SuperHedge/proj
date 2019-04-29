@@ -82,7 +82,7 @@ char RCD(char v[]) {                   // Basically the same as the cipher, exce
     
     printf("Diphered code is : ");
     
-    for (int rot = 0; rot <= 26; mod++ && rot++) {
+    for (int rot = 0; rot <= 26; rot++) {
         
         for (i = 0; v[i] != '\0'; i++) {
     
@@ -90,11 +90,11 @@ char RCD(char v[]) {                   // Basically the same as the cipher, exce
         
             if (x <= 'z' && x >= 'a') {
             
-                x = x - mod;
+                x = x;
             
             } else if (x <= 'Z' && x >= 'A') {
             
-                x = x - mod;
+                x = x;
             
             }
             if (x == '@') {
