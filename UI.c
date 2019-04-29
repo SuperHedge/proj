@@ -1,7 +1,7 @@
 #include <stdio.h>
 
-char RCC (char *v[]);
-char RCD (int *v[]);
+char RCC (char v[]);
+char RCD (char v[]);
 
 
 int main () {
@@ -9,7 +9,7 @@ int main () {
     char q, k[1024];
     
     printf("Enter message : ");
-    gets();
+    gets(k);
     
     printf("Enter a for rotation cipher \nEnter b for rotation decipher \nEnter c for substitution cipher \n");
     
@@ -18,10 +18,10 @@ int main () {
     }while (q != 'a' && q != 'b' && q != 'c');
     
     if (q == 'a') {
-        RCC(k[1024]);
+        RCC(k);
         
     } else if (q == 'b') {
-        RCD(k[1024]);
+        RCD(k);
         
     } else if (q == 'c') {
         printf("=\nP");
@@ -30,9 +30,9 @@ int main () {
     return 0;
 }
 
-char RCC(char *v) {
+char RCC(char v[]) {
      
-    int j, Mod;                          //declaring some variables
+    int y, j, Mod;                          //declaring some variables
 
     printf("Enter Positive Shift : ");
     scanf("%d", &Mod);
@@ -74,17 +74,15 @@ char RCC(char *v) {
 
 }
 
-char RCD(int x) {                   // Basically the same as the cipher, except word changes and the mod is a minus
+char RCD(char v[]) {                   // Basically the same as the cipher, except word changes and the mod is a minus
     
-    char v[1024];
-    int i, mod;
     
-    printf("Enter message : ");
-    gets(v);
+    int x, i, mod;
+    
     
     printf("Diphered code is : ");
     
-    for (int rot = 0; rot <= 26; rot++) {
+    for (int rot = 0; rot <= 26; mod++ && rot++) {
         
         for (i = 0; v[i] != '\0'; i++) {
     
