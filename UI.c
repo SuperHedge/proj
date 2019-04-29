@@ -1,7 +1,9 @@
 #include <stdio.h>
+#include <string.h>
 
 char RCC (char v[]);
 char RCD (char v[]);
+char SC (char v[]);
 
 
 int main () {
@@ -24,7 +26,7 @@ int main () {
         RCD(k);
         
     } else if (q == 'c') {
-        printf("=P \n");
+        SC(k);
     }
     
     return 0;
@@ -111,12 +113,38 @@ char RCD(char v[]) {                   // Basically the same as the cipher, exce
     
         printf("%c", v[i]);
     
-        }
-    
+        } 
     printf("\n");
     
     }
-
-
     return x;
+    
+}
+
+char SC (char v[]) {
+    
+    char* text = "qwertyuiopasdfghjklzxcvbnm";
+
+    int c = strlen(v);
+    
+    char k[c];
+
+    for(int i = 0; i < c; i++) {
+
+        int j = ((int) v[i]) - 97;  
+
+        if(j < 0) {
+            
+            k[i] = ' ';    
+
+        } else {
+            
+            k[i] = text[j];    
+
+        }
+    }
+    
+    k[c] = 0; 
+
+    printf("Ciphered text is : %s\n", k);
 }
